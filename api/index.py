@@ -18,7 +18,7 @@ collection = db.helloCollection
 
 # Crear el documento a insertar
 document = {
-    "message": "Hello",
+    "message": "Hello"
 }
 
 # Insertar el documento en la colección

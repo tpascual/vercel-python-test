@@ -1,6 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 
-tata = 'test-rando'
+tata = os.environ.get('PPP')
  
 class handler(BaseHTTPRequestHandler):
  

@@ -12,16 +12,6 @@ if uri is None:
 # Conectarse al cliente de MongoDB
 client = MongoClient(uri)
 
-def check_connection():
-    try:
-        # Intenta listar las bases de datos para verificar la conexión
-        client.list_database_names()
-        return True
-    except Exception as e:
-        print(f"Error al conectar con MongoDB: {e}")
-        return False
-
-
 # Seleccionar la base de datos y la colección
 #db = client.testDante
 #collection = db.helloCollection
@@ -42,14 +32,8 @@ tata = os.environ.get('PPP')
 class handler(BaseHTTPRequestHandler):
  
     def do_GET(self):
-        if check_connection():
-            self.send_response(200)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write('OK'.encode('utf-8'))
-        else:
-            self.send_response(500)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write('Failed to connect to MongoDB'.encode('utf-8'))
-        return
+        self.send_response(200)
+        self.send_header('Content-type', 'text/plain')
+        self.end_headers()
+        self.wfile.write('OK'.encode('utf-8'))
+

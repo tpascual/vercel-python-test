@@ -1,6 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 import os
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):

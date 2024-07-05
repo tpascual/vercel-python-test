@@ -16,9 +16,9 @@ class handler(BaseHTTPRequestHandler):
 
         try:
             # Conectarse al cliente de MongoDB
-            client = MongoClient(uri)
+            #client = MongoClient(uri)
             # Verificar la conexión listando las bases de datos
-            client.list_database_names()
+            #client.list_database_names()
             # Si la conexión es exitosa, responder con "OK"
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')

@@ -21,6 +21,7 @@ def check_connection():
         print(f"Error al conectar con MongoDB: {e}")
         return False
 
+
 # Seleccionar la base de datos y la colección
 #db = client.testDante
 #collection = db.helloCollection

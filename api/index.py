@@ -30,12 +30,3 @@ class handler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(f'Error al conectar con MongoDB: {str(e)}'.encode('utf-8'))
 
-# Inicializar y correr el servidor HTTP
-def run(server_class=BaseHTTPRequestHandler.HTTPServer, handler_class=handler, port=8080):
-    server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
-    print(f'Starting httpd server on port {port}...')
-    httpd.serve_forever()
-
-if __name__ == "__main__":
-    run()
